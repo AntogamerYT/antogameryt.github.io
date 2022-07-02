@@ -1,0 +1,25 @@
+body {
+    background-color: #192734;
+    font-family: 'Fira Code', monospace;
+}
+
+p {
+    color: #fff
+}
+#main {
+    text-align: center;
+    vertical-align: text-bottom;
+    font-size: 70px;
+}
+#titletwo {
+    text-align: center;
+}
+#whotfp {
+    font-weight: bold;
+    margin-left: 6%;
+}
+
+#whotfp2 {
+    width: 20%;
+    margin-left: 2%;
+}
