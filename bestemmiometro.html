@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 const socket = new WebSocket("ws://vps.antogamer.it:8080")
 
 socket.onopen = function(msg) {
-alert("connesso "+ msg)
+alert("connesso "+ Object.keys(msg))
 }
 })
 </script>
