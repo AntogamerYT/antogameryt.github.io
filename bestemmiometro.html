@@ -12,11 +12,12 @@ alert("connesso")
 }
 
 socket.onmessage = function(msg) {
-const p = document.getElementById("bestemmie")
+var p = document.getElementById("bestemmie")
 const message = JSON.parse(msg.data)
 if (message.message.contains("Benvenuto!")) {
-p = message.bestemmie.toString()
+p.innerHTML = message.bestemmie.toString()
 }
+p.innerHTML = (parseInt(p.innerHTML) + message.newbestemmie).toString()
 }
 
 })
