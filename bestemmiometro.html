@@ -14,6 +14,7 @@ alert("connesso")
 socket.onmessage = function(msg) {
 var p = document.getElementById("bestemmie")
 const message = JSON.parse(msg.data)
+alert("json parse: " + message + " msg data: " + msg.data)
 if (message.message.contains("Benvenuto!")) {
 p.innerHTML = message.bestemmie.toString()
 }
