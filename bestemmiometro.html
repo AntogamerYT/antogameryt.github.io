@@ -8,14 +8,23 @@ window.addEventListener("load", function() {
 const socket = new WebSocket("ws://vps.antogamer.it:8080")
 
 socket.onopen = function(msg) {
-alert("connesso "+ Object.keys(msg))
+alert("connesso")
 }
+
+socket.onmessage = function(msg) {
+const p = document.getElementById("bestemmie")
+const message = JSON.parse(msg.data)
+if (message.message.contains("Benvenuto!")) {
+p = message.bestemmie.toString()
+}
+}
+
 })
 </script>
 <head>
 <body>
 <div style="text-allign: center;">
-<p id="bestemmie">Caricamento...</p>
+<p id="bestemmie" style="text-allign: center">Caricamento...</p>
 </div>
 </body>
 </html>
